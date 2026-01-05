@@ -1,0 +1,4 @@
+*.mat
+*.asv
+*.oct
+Thumbs.db
