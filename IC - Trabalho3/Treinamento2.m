@@ -170,7 +170,7 @@ function params = train_ch8(params, X_train, Y_train, vocab_size, idx_to_char, l
 
   % Configuração de Predição
   % Vamos testar a rede gerando texto a partir deste prefixo
-  prefixo_teste = 'percy jackson';
+  prefixo_teste = 'acampamento meio sangue';
   num_preds = 50;
 
   printf("Iniciando treinamento por %d épocas...\n", num_epochs);
@@ -212,8 +212,8 @@ function params = train_ch8(params, X_train, Y_train, vocab_size, idx_to_char, l
 
   printf("\nTreinamento Finalizado!\n");
 
-  texto_final_1 = predict_ch8('percy jackson', 50, params, idx_to_char, vocab_size);
-  texto_final_2 = predict_ch8('percy', 50, params, idx_to_char, vocab_size);
+  texto_final_1 = predict_ch8('acampamento meio sangue', 50, params, idx_to_char, vocab_size);
+  texto_final_2 = predict_ch8('meio sangue', 50, params, idx_to_char, vocab_size);
 
   printf("Final 1: %s\n", texto_final_1);
   printf("Final 2: %s\n", texto_final_2);
@@ -226,8 +226,8 @@ clear; clc; close all;
 batch_size = 128;
 num_steps = 35;
 num_hiddens = 512;
-learning_rate = 50; % Taxa alta é comum quando implementamos do zero sem otimizadores complexos (Adam)
-num_epochs = 10;
+learning_rate = 100; % Taxa alta é comum quando implementamos do zero sem otimizadores complexos (Adam)
+num_epochs = 100;
 
 arquivo = 'PJO_e_o_ladrao_de_raios.txt';
 
